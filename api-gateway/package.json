@@ -1,0 +1,19 @@
+{
+  "name": "api-gateway",
+  "version": "0.0.1",
+  "license": "MIT",
+  "engines": {
+    "node": "^6.9.5",
+    "yarn": "^0.19.1"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.14.1",
+    "helmet": "^3.5.0",
+    "morgan": "^1.8.1",
+    "request": "^2.81.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "history-service",
+  "version": "0.0.1",
+  "license": "MIT",
+  "engines": {
+    "node": "^6.9.5",
+    "yarn": "^0.19.1"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "./node_modules/.bin/mocha src/**/*spec.js --reporter spec"
+  },
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.14.1",
+    "http-status-codes": "^1.1.6",
+    "mongoose": "^4.8.1",
+    "morgan": "^1.8.1",
+    "node-env-file": "^0.1.8",
+    "proxyquire": "^1.7.11",
+    "chai": "^3.5.0",
+    "sinon": "^2.1.0"
+  }
+}

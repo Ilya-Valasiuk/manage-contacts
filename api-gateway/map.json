@@ -1,0 +1,12 @@
+[
+    {
+        "match": ["/contacts", "/contacts/*"],
+        "path": "http://localhost",
+        "port": 8086
+    },
+    {
+        "match": ["/history", "/history/*"],
+        "path": "http://localhost",
+        "port": 8085
+    }
+]
