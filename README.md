@@ -34,6 +34,7 @@ Develop API which should provide endpoints to manage contacts.
   
   # Need to do  
   - [ ] finish unit tests
+  - [ ] prepare mock data/switch to remote db
   - [ ] documentation
   - [ ] docker
   - [ ] load balancer
