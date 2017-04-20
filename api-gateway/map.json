@@ -1,12 +1,12 @@
 [
     {
         "match": ["/contacts", "/contacts/*"],
-        "path": "http://localhost",
+        "path": "http://contacts-service",
         "port": 8086
     },
     {
         "match": ["/history", "/history/*"],
-        "path": "http://localhost",
+        "path": "http://history-service",
         "port": 8085
     }
 ]

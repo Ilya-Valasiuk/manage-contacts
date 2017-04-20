@@ -1,0 +1,43 @@
+version: '2'
+services:
+  mongo: 
+    image: mongo
+    command: mongod --smallfiles
+    ports:
+    - "27015:27017"
+    networks:
+    - backend
+
+  contacts-service:
+    build: contacts
+    ports:
+     - "8086:8086"
+    depends_on:
+      - mongo
+    networks:
+      - frontend
+      - backend
+
+  history-service:
+      build: history
+      ports:
+      - "8085:8085"
+      depends_on:
+      - mongo
+      networks:
+        - frontend
+        - backend
+
+  api-gateway-service:
+    build: api-gateway
+    ports:
+      - "3000:3000"
+    depends_on:
+      - contacts-service
+      - history-service
+    networks:
+      - frontend
+
+networks:
+  frontend:
+  backend:
