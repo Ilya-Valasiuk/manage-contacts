@@ -4,10 +4,9 @@ Develop API which should provide endpoints to manage contacts.
 # To start
 1) clone repo
 2) cd repo
-3) sh ./install.sh
-4) sh ./start/sh
+3) sh ./start/sh
 
-**Note: mongod must be started on default port.**
+**Note: docker must be installed.**
 
 # API
   - GET - http://localhost:3000/contacts - list of all contacts;
@@ -36,5 +35,5 @@ Develop API which should provide endpoints to manage contacts.
   - [ ] finish unit tests
   - [ ] prepare mock data/switch to remote db
   - [ ] documentation
-  - [ ] docker
+  - [x] docker
   - [ ] load balancer
