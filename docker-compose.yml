@@ -3,6 +3,8 @@ services:
   mongo: 
     image: mongo
     command: mongod --smallfiles
+    volumes:
+      - './data:/data/db'
     ports:
     - "27015:27017"
     networks:
@@ -10,8 +12,6 @@ services:
 
   contacts-service:
     build: contacts
-    ports:
-     - "8086:8086"
     depends_on:
       - mongo
     networks:
@@ -20,8 +20,6 @@ services:
 
   history-service:
       build: history
-      ports:
-      - "8085:8085"
       depends_on:
       - mongo
       networks:
