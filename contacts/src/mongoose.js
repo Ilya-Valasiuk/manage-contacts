@@ -1,8 +1,14 @@
-const config = require('config/config');
 const mongoose = require('mongoose');
 
-mongoose.connect(config.mongodb.uri, (err) => {
-    console.log(err);
-});
-
-module.exports = mongoose;
+module.exports = (config) => {
+    return {
+        connect: () => {
+            mongoose.connect(config.mongodb.uri, (err) => {
+                if (err) {
+                    console.log(err);
+                }
+            });
+        },
+        disconnect: () => {}
+    }
+};

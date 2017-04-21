@@ -1,4 +1,4 @@
-const mongoose = require('src/mongoose');
+const mongoose = require('mongoose');
 
 const Model = new mongoose.Schema({
     name: { type: String, required: true },

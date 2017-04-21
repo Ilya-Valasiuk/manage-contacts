@@ -7,5 +7,6 @@ const env = require('node-env-file');
 env(__dirname + '/.env');
 const config = require('config/config')
 
+require('./src/mongoose')(config).connect();
 require('./src/router')(app);
 require('./src/run')(app, config);
